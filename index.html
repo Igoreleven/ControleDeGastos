@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Controle de gastos</title>
+  </head>
+  <body>
+
+    <h2>CPNTROLE DE GASTOS</h2>
+    <h4>Gastos totais</h4>
+    <h1 id="balance" class="balance"></h1>
+    <div class="container">
+      <div class="inc-exp-container">
+        <div>
+          <h4>Receita</h4>
+          <p id="receita" class="money plus">R$1.500</p>
+        </div>
+
+        <div>
+          <h4>Gastos</h4>
+          <p id="money-plus" class="money minus"></p>
+        </div>
+      </div>
+
+      <h3>Gastos gerais</h3>
+      
+      <ul id="transactions" class="transactions">
+        
+      </ul>
+
+      <h3>Adicionar transação</h3>
+      
+      <form id="form">
+        <div class="form-control">
+          <label for="text">Nome</label>
+          <input autofocus type="text" class="yes" id="text" placeholder="Nome da transação" />
+        </div>
+
+        <div class="form-control">
+          <label for="amount">Valor <br />
+          </label>
+          <input type="number" class="yes" id="amount" placeholder="Valor da transação" />
+            <small>*insira somente números</small>
+        </div>
+        <div class="ops"> 
+          <label for="ops">Selecione:</label><br>
+          <select id="ops">
+            <option>Gastos</option>
+          </select>
+        </div>
+        <button id="btn-add" data-action='button-adicionar' class="btn">Adicionar</button>
+        </form>
+    <script>
+    function total(){
+      var receita = document.getElementById("money_exit");
+      var gastos = document.getElementById("money-plus");
+      var total = gastos + receita;
+    }
+    </script>
+    <script src="script.js"></script>
+  </div>
+  </body>
+</html>
